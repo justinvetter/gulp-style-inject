@@ -89,7 +89,7 @@ module.exports = function ( option ) {
 
             contents = contents.replace( new RegExp( option.match_pattern, 'gi' ), function ( match, parameters ) {
                 var attrs = getAttributes( parameters );
-                return getStyleFile( option.path + attrs.src );
+                return getStyleFile( option.path + attrs.href );
             } );
 
             file.contents = new Buffer( contents );
